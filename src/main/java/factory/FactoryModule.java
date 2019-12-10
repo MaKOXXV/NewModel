@@ -23,13 +23,16 @@ public class FactoryModule {
 	
 	@SuppressWarnings("deprecation")
 	public  WebDriver iniciacao(){		
-		//System.out.println("|---------> Instanciando Driver : ChromeDriver <------------|");
-		//System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-		//driver = new ChromeDriver();
+		System.out.println("|---------> Instanciando Driver : ChromeDriver <------------|");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+		driver = new ChromeDriver();
 		
-		System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver.exe");
-		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		capabilities.setCapability("marionette",true);
+		//Execucao em Firefox
+		
+		//System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver.exe");
+		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		//capabilities.setCapability("marionette",true);
+		
 		driver= new FirefoxDriver(capabilities);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -38,7 +41,7 @@ public class FactoryModule {
 	
 	public void highLight(WebElement element, WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		// Objeto que permite alteraÃ§Ã£o de cor entre labels na estrutura selecionada
+		// Objeto que permite alteracao de cor entre labels na estrutura selecionada
 		js.executeScript("arguments[0].setAttribute('style', 'background: blue; border: 2px solid green;');", element);
 	}
 	
