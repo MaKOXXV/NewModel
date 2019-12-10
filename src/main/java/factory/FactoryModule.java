@@ -36,7 +36,7 @@ public class FactoryModule {
 	
 	public void waitingElemnt(WebDriver driver, String findex) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 10);
+			WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(presenceOfElementLocated(By.xpath(findex)));
 			
 		}catch (NullPointerException ex){
