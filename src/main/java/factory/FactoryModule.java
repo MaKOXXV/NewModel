@@ -19,10 +19,12 @@ public class FactoryModule {
 	static String driverPath = "src/test/";
 	WebDriver driver;
 	
-	public  WebDriver iniciacao(){		
+	
+	public  WebDriver iniciacao() throws InterruptedException{		
 		System.out.println("|---------> Instanciando Driver : ChromeDriver <------------|");
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 		driver = new ChromeDriver();
+		Thread.sleep(10000);
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
@@ -36,7 +38,7 @@ public class FactoryModule {
 	
 	public void waitingElemnt(WebDriver driver, String findex) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 60);
+			WebDriverWait wait = new WebDriverWait(driver, 10);
 			wait.until(presenceOfElementLocated(By.xpath(findex)));
 			
 		}catch (NullPointerException ex){
