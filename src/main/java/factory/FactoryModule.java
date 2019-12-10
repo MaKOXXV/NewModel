@@ -23,7 +23,7 @@ public class FactoryModule {
 		System.out.println("|---------> Instanciando Driver : ChromeDriver <------------|");
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
 	}
