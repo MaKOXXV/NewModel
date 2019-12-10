@@ -25,7 +25,7 @@ pipeline{
 		}
 	    	steps{
 	    		withMaven(maven : 'maven_3_6_3'){
-	    			bat 'mvn test -s settings.xml'
+	    			bat 'mvn -X test -s settings.xml'
 				//sh label: '', script: 'mvn test -s settings.xml'
 	    		}
 	    	}
