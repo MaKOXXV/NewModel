@@ -1,0 +1,13 @@
+<settings>
+  <proxies>
+   <proxy>
+      <id>example-proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>proxylatam.indra.es</host>
+      <port>8080</port>
+      <username>mlemos</username>
+      <password>Blastoizenull1</password>
+    </proxy>
+  </proxies>
+</settings>
