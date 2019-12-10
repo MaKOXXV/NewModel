@@ -20,12 +20,11 @@ public class FactoryModule {
 	WebDriver driver;
 	
 	
-	public  WebDriver iniciacao() throws InterruptedException{		
+	public  WebDriver iniciacao(){		
 		System.out.println("|---------> Instanciando Driver : ChromeDriver <------------|");
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 		driver = new ChromeDriver();
-		Thread.sleep(10000);
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
 	}
