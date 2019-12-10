@@ -1,5 +1,5 @@
 package factory;
-
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,7 +19,6 @@ public class FactoryModule {
 	static String driverPath = "src/test/";
 	WebDriver driver;
 	
-	
 	public  WebDriver iniciacao(){		
 		System.out.println("|---------> Instanciando Driver : ChromeDriver <------------|");
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
@@ -31,7 +30,7 @@ public class FactoryModule {
 	
 	public void highLight(WebElement element, WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		// Objeto que permite alteração de cor entre labels na estrutura selecionada
+		// Objeto que permite alteraÃ§Ã£o de cor entre labels na estrutura selecionada
 		js.executeScript("arguments[0].setAttribute('style', 'background: blue; border: 2px solid green;');", element);
 	}
 	
