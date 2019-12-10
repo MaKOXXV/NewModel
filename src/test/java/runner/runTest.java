@@ -17,7 +17,8 @@ public class runTest {
 	@SuppressWarnings("unchecked")
 	@BeforeClass
 	public static void setup() {
-
+			
+		//Configuracao para testes report em Extend
 		/***
 		 * ExtentCucumberFormatter.initiateExtentCucumberFormatter();
 		 * 
