@@ -32,8 +32,8 @@ public class FactoryModule {
 		//System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver.exe");
 		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		//capabilities.setCapability("marionette",true);
+		//driver= new FirefoxDriver(capabilities);
 		
-		driver= new FirefoxDriver(capabilities);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
