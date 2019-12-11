@@ -21,8 +21,7 @@ public class StepsValidadacaoIdade {
 
 	@Before
 	public void setUp() {
-		driver = modulo.iniciacao();
-		validate = new PageObjectValidacao(driver);
+
 	}
 
 	@After
@@ -38,6 +37,8 @@ public class StepsValidadacaoIdade {
 	public void esteja_na_tela_tela_Swagger() {
 		System.out.println("Estagio inicial Instanciamento");
 		System.out.println("------------EXECUÇÂO DE TESTES-----------");
+		driver = modulo.iniciacao();
+		validate = new PageObjectValidacao(driver);
 	}
 
 	@Given("MapfreCap API {string}")

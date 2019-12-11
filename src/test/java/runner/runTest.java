@@ -7,8 +7,10 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = { "src/test/resources/features" }, glue = { "steps" }, monochrome = true, tags = {
-		"@history11" },
+@CucumberOptions(features = { "src/test/resources/features" }, 
+		glue = { "steps" }, 
+		monochrome = true, 
+		tags = {"@history11" },
 		// @1036, @1038, @1037, @1063, @1263, @15234, @16093
 		plugin = { "json:target/cucumber.json", "pretty", "html:target/cucumber.html"})
 
