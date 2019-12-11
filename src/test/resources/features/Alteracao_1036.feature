@@ -38,9 +38,3 @@ Background:
         And clicar no botão "Sim"
         Then O sistema apresenta a mensagem "Operação realizada com sucesso"
              
-
-
-        
-        
-
-
