@@ -18,14 +18,17 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 
 public class FactoryModule {
 	
-	static String driverPath = "src/test/";
+	
 	WebDriver driver;
 	
 	@SuppressWarnings("deprecation")
 	public  WebDriver iniciacao(){		
 		System.out.println("|---------> Instanciando Driver : ChromeDriver <------------|");
-		System.setProperty("webdriver.chrome.driver", "C:\\Automato\\chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		driver = new ChromeDriver(options);
 		
 		//Execucao em Firefox
 		
