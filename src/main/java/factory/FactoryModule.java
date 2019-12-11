@@ -8,6 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,7 +18,6 @@ import cucumber.api.Scenario;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 public class FactoryModule {
-	
 	
 	WebDriver driver;
 	
@@ -32,11 +32,11 @@ public class FactoryModule {
 		
 		//Execucao em Firefox
 		
-		//System.setProperty("webdriver.gecko.driver","C:\\Automato\\chromedriver.exe");
+		//System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver.exe");
 		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		//capabilities.setCapability("marionette",true);
-		//driver= new FirefoxDriver(capabilities);
 		
+		//driver= new FirefoxDriver(capabilities);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
