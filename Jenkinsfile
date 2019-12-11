@@ -2,6 +2,7 @@ pipeline{
     agent any
 	
     stages {
+	
 	stage ('Compile Stage') {
 		tools{
 			jdk 'Java8'
@@ -9,13 +10,12 @@ pipeline{
 		}
 	    	steps{
 
-	    		withMaven(maven : 'maven3.6'){
-	    			sh 'mvn clean install'
+	    		withMaven(maven : 'maven_3_6_3'){
+	    			bat 'mvn clean install -s settings.xml'
 				//sh label: '', script: 'mvn clean install package -s settings.xml'
 	    		}
 	    	}
 	    }
-	
     
 	    stage ('testing Stage') {
 		    
@@ -24,8 +24,8 @@ pipeline{
 				
 		}
 	    	steps{
-	    		withMaven(maven : 'maven3.6'){
-	    			sh 'mvn test'
+	    		withMaven(maven : 'maven_3_6_3'){
+	    			bat 'mvn -X test -s settings.xml'
 				//sh label: '', script: 'mvn test -s settings.xml'
 	    		}
 	    	}
@@ -37,10 +37,12 @@ pipeline{
 			jdk 'Java8'
 				
 		}
-		steps{
-			echo "teste"
-		}
-	    	
+	    	 steps {
+                cucumber buildStatus: "UNSTABLE",
+                    fileIncludePattern: "target/cucumber.json",
+                    jsonReportDirectory: 'target'
+
+            }
 	    }
     	
     }
