@@ -24,7 +24,7 @@ public class FactoryModule {
 	@SuppressWarnings("deprecation")
 	public  WebDriver iniciacao(){		
 		System.out.println("|---------> Instanciando Driver : ChromeDriver <------------|");
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Automato\\chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		//Execucao em Firefox
