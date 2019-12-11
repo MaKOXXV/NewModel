@@ -47,7 +47,7 @@ public class FactoryModule {
 			driver = new InternetExplorerDriver();
 			break;
 		default:
-			System.out.println("Este Browser não é valido");
+			System.out.println("Este Browser nao e valido");
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
