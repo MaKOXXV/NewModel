@@ -36,7 +36,7 @@ public class StepsValidadacaoIdade {
 	@Given("esteja na tela tela Swagger")
 	public void esteja_na_tela_tela_Swagger() {
 		System.out.println("Estagio inicial Instanciamento");
-		System.out.println("------------EXECUÇÂO DE TESTES-----------");
+		System.out.println("------------EXECUCAO DE TESTES-----------");
 		driver = modulo.iniciacao();
 		validate = new PageObjectValidacao(driver);
 		step1036 = new PageObject1036Alteracao(driver);

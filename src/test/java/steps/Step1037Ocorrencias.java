@@ -6,23 +6,18 @@ import cucumber.api.java.en.When;
 
 public class Step1037Ocorrencias {
 	
-	@Given("Dado que esteja logado no sistema Odonto na aba Cadastro Prestador e Ocorrências")
+	@Given("Dado que esteja logado no sistema Odonto na aba Cadastro Prestador e Ocorrï¿½ncias")
 	public void dado_que_esteja_logado_no_sistema_Odonto_na_aba_Cadastro_Prestador_e_Ocorrencias() {
 
 	}
 
-	@When("preencher somente os campos obrigatórios")
+	@When("preencher somente os campos obrigatï¿½rios")
 	public void preencher_somente_os_campos_obrigatorios() {
 
 	}
 
-	@Given("que esteja logado no sistema Odonto na aba Cadastro Prestador e Ocorrências")
+	@Given("que esteja logado no sistema Odonto na aba Cadastro Prestador e Ocorrï¿½ncias")
 	public void que_esteja_logado_no_sistema_Odonto_na_aba_Cadastro_Prestador_e_Ocorrencias() {
-
-	}
-
-	@When("não preencher os campos obrigatórios")
-	public void não_preencher_os_campos_obrigatorios() {
 
 	}
 
