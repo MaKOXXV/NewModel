@@ -10,7 +10,7 @@ pipeline{
 	    	steps{
 
 	    		withMaven(maven : 'maven3.6'){
-	    			sh 'mvn -X clean verify'
+	    			sh 'mvn clean install'
 				//sh label: '', script: 'mvn clean install package -s settings.xml'
 	    		}
 	    	}
@@ -25,7 +25,7 @@ pipeline{
 		}
 	    	steps{
 	    		withMaven(maven : 'maven3.6'){
-	    			sh 'mvn -X test'
+	    			sh 'mvn test'
 				//sh label: '', script: 'mvn test -s settings.xml'
 	    		}
 	    	}
