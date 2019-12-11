@@ -37,12 +37,10 @@ pipeline{
 			jdk 'Java8'
 				
 		}
-	    	 steps {
-                cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "target/cucumber.json",
-                    jsonReportDirectory: 'target'
-
-            }
+		steps{
+			echo "teste"
+		}
+	    	
 	    }
     	
     }
