@@ -29,7 +29,7 @@ public class FactoryModule {
 		
 		//Execucao em Firefox
 		
-		//System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver","C:\\Automato\\chromedriver.exe");
 		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		//capabilities.setCapability("marionette",true);
 		//driver= new FirefoxDriver(capabilities);
