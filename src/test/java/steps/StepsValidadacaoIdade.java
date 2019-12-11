@@ -1,7 +1,5 @@
 package steps;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import cucumber.api.Scenario;
@@ -11,6 +9,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import factory.FactoryModule;
+import pageObject.PageObject1036Alteracao;
 import pageObject.PageObjectValidacao;
 
 public class StepsValidadacaoIdade {
@@ -18,10 +17,11 @@ public class StepsValidadacaoIdade {
 	
 	FactoryModule modulo = new FactoryModule();
 	PageObjectValidacao validate = new PageObjectValidacao(null);
+	PageObject1036Alteracao step1036 = new PageObject1036Alteracao(null);
 
 	@Before
 	public void setUp() {
-
+		
 	}
 
 	@After
@@ -39,6 +39,7 @@ public class StepsValidadacaoIdade {
 		System.out.println("------------EXECUÇÂO DE TESTES-----------");
 		driver = modulo.iniciacao();
 		validate = new PageObjectValidacao(driver);
+		step1036 = new PageObject1036Alteracao(driver);
 	}
 
 	@Given("MapfreCap API {string}")
@@ -48,7 +49,7 @@ public class StepsValidadacaoIdade {
 
 	@When("validar que estou na pagina MapfreCap API")
 	public void validar_que_estou_na_pagina_MapfreCap_API() {
-		validate.valide();
+		step1036.valide();
 	}
 
 	@When("clicar em pessoa")

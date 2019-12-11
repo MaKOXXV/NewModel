@@ -1,7 +1,5 @@
 package pageObject;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,16 +21,6 @@ public class PageObjectValidacao {
 		System.out.println("Acessando URL : " + url);
 		driver.get(url);
 		
-	}
-	
-	public void valide() {
-		//String element = "//*[@id=\"logo\"]/span";
-		String element = "//*[@id=\"hplogo\"]";
-		modulo.waitingElemnt(driver, element);
-		WebElement textoElement;
-		textoElement = driver.findElement(By.xpath(element));
-		textoElement.getText();
-		modulo.highLight(textoElement, driver);	
 	}
 	
 	public void pessoa() {

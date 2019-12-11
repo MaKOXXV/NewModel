@@ -46,7 +46,7 @@ public class Step1036Alteracao {
 	}
 
 	@When("clicar no botão {string}")
-	public void clicar_no_botão(String string) {
+	public void clicar_no_botao(String string) {
 
 	}
 

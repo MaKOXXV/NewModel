@@ -11,17 +11,17 @@ public class Step16093CadastroUsuario {
 	}
 
 	@When("Informar um {string} já existente")
-	public void informar_um_já_existente(String string) {
+	public void informar_um_ja_existente(String string) {
 
 	}
 
 	@When("realizar a alteração do {string} desejado")
-	public void realizar_a_alteração_do_desejado(String string) {
+	public void realizar_a_alteracao_do_desejado(String string) {
 
 	}
 
 	@When("Informar um {string} ainda não cadastrado")
-	public void informar_um_ainda_não_cadastrado(String string) {
+	public void informar_um_ainda_nao_cadastrado(String string) {
 
 	}
 

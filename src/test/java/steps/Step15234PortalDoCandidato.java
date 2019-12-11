@@ -31,12 +31,12 @@ public class Step15234PortalDoCandidato {
 	}
 
 	@When("aceitar a confirmação dos dados")
-	public void aceitar_a_confirmação_dos_dados() {
+	public void aceitar_a_confirmacao_dos_dados() {
 
 	}
 
 	@Then("o sistema apresenta o número de protocolo")
-	public void o_sistema_apresenta_o_número_de_protocolo() {
+	public void o_sistema_apresenta_o_numero_de_protocolo() {
 
 	}
 
@@ -66,17 +66,17 @@ public class Step15234PortalDoCandidato {
 	}
 
 	@Then("o sistema apresenta a {string} solicitação")
-	public void o_sistema_apresenta_a_solicitação(String string) {
+	public void o_sistema_apresenta_a_solicitacao(String string) {
 
 	}
 
 	@Given("realize a alteração desejada")
-	public void realize_a_alteração_desejada() {
+	public void realize_a_alteracao_desejada() {
 
 	}
 
 	@Given("clicar no botão {string} no menu que fez a alteração")
-	public void clicar_no_botão_no_menu_que_fez_a_alteração(String string) {
+	public void clicar_no_botão_no_menu_que_fez_a_alteracao(String string) {
 
 	}
 
