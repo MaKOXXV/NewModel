@@ -18,7 +18,7 @@ public class Step1063Reativacao {
 
 	}
 
-	@When("Clicar no Botão {string}")
+	@When("Clicar no Botao {string}")
 	public void clicar_no_Botao(String string) {
 
 	}
