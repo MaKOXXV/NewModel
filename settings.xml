@@ -6,8 +6,8 @@
       <protocol>http</protocol>
       <host>proxylatam.indra.es</host>
       <port>8080</port>
-      <username>mlemos</username>
-      <password>blastoizenull1</password>
+      <username></username>
+      <password></password>
     </proxy>
   </proxies>
 </settings>
