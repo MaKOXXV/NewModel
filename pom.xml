@@ -8,6 +8,17 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	
+	<build>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.1.0</version> <!-- Here, instead of 3.1 you had in the question -->
+      </plugin>           
+    </plugins>
+  </pluginManagement>   
+</build>
 
 
 
