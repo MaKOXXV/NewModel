@@ -11,16 +11,8 @@ pipeline{
 	    	steps{
 
 	    		withMaven(maven : 'maven_3_6_3'){
-				try{
-	    				sh 'mvn clean install'
-				}
-				try{
-	    				bat 'mvn clean install -s settings.xml'
-				}
-				catch(err) {
-  					echo 'command fail'
-				}
-				
+	    			bat 'mvn clean install -s settings.xml'
+				//sh label: '', script: 'mvn clean install package -s settings.xml'
 	    		}
 	    	}
 	    }
@@ -32,16 +24,10 @@ pipeline{
 				
 		}
 	    	steps{
-	    		withMaven(maven : 'maven_3_6_3'){			
-				try{
-	    				sh 'mvn mvn -X test'
-				}
-				try{
-	    				bat 'mvn mvn -X test -s settings.xml'
-				}
-				catch(err) {
-  					echo 'command fail'
-				}
+	    		withMaven(maven : 'maven_3_6_3'){
+	    			bat 'mvn -X test -s settings.xml'
+				//sh label: '', script: 'mvn test -s settings.xml'
+	    		}
 	    	}
 	    }
 	    
