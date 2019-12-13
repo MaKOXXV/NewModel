@@ -15,7 +15,7 @@ pipeline{
 	    				sh 'mvn clean install'
 				}
 				try{
-	    				bat 'mvn clean install'
+	    				bat 'mvn clean install -s settings.xml'
 				}
 				catch(err) {
   					echo 'command fail'
@@ -37,7 +37,7 @@ pipeline{
 	    				sh 'mvn mvn -X test'
 				}
 				try{
-	    				bat 'mvn mvn -X test'
+	    				bat 'mvn mvn -X test -s settings.xml'
 				}
 				catch(err) {
   					echo 'command fail'
